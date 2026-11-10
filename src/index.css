@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonte Padrão do Sistema (Bootstrap) */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Cores Neutras e de Texto Globais */
+  --color-branco: #ffffff;
+  --color-preto: #212529;            /* Bootstrap Dark / Cor padrão do texto */
+  --color-fundo-claro: #f8f9fa;      /* Bootstrap Light bg */
+  --color-borda: #dee2e6;            /* Bootstrap Border color */
+
+  /* Estados e Alertas Oficiais */
+  --color-erro: #dc3545;             /* Bootstrap Danger */
+  --color-sucesso: #198754;          /* Bootstrap Success */
+  --color-aviso: #ffc107;            /* Bootstrap Warning */
+  --color-info: #0dcaf0;             /* Bootstrap Info */
+  --color-cinza-escuro: #6c757d;     /* Bootstrap Secondary / Gray-600 */
+  --color-cinza: #ced4da;            /* Bootstrap Gray-400 (borda de inputs) */
+
+  /* Padronização das Listras da Tabela (Estilo table-striped) */
+  --color-tabela-branco: #ffffff;
+  --color-tabela-cinza: #f2f2f2;     /* Tom oficial do background zebrado do Bootstrap */
+
+  --color-primaria: #0b3d91;         /* Bootstrap Primary */
+  --color-hover: #082d6e;            /* Bootstrap Primary Hover */
+  --color-ativa: #052c65;            /* Bootstrap Primary Active */
+}
+
+/* 📌 Guia de Referência
+
+   Fardamento OpenPlot:
+   --color-primaria: #0b3c91;
+   --color-hover: #082d6e;
+   --color-ativa: #052c65;
+
+   Fardamento INESC P&D:
+   --color-primaria: #80c342;
+   --color-hover: #5e9e23;
+   --color-ativa: #50871e;
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-branco);
+  font-family: var(--font-sans);
+  color: var(--color-preto);
+  line-height: 1.5;
+}
