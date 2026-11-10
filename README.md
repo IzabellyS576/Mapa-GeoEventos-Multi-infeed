@@ -1,75 +1,85 @@
-# React + TypeScript + Vite
+# 🗺️ Mapa GeoEventos <> Multi-Infeed
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web interativa que exibe um mapa utilizando **Leaflet**, construída com **React**, **Vite**, **TypeScript** e **Tailwind CSS**.
 
-Currently, two official plugins are available:
+> Esse repositório busca estudar como o Mapa GeoEventos pode ser usado no Multi-Infeed em React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Mapa interativo com zoom e navegação (arraste)
+- Marcadores e popups com informações
+- Interface responsiva estilizada com Tailwind CSS
+- Código tipado com TypeScript
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologias
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Tecnologia | Uso |
+|---|---|
+| [React](https://react.dev/) | Biblioteca para construção da interface |
+| [Vite](https://vitejs.dev/) | Bundler e servidor de desenvolvimento |
+| [TypeScript](https://www.typescriptlang.org/) | Tipagem estática |
+| [Tailwind CSS](https://tailwindcss.com/) | Estilização utilitária |
+| [Leaflet](https://leafletjs.com/) | Geração e manipulação do mapa |
+| [React Leaflet](https://react-leaflet.js.org/) | Integração do Leaflet com React |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Pré-requisitos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Antes de começar, você precisa ter instalado:
 
+- [Node.js](https://nodejs.org/) **18 ou superior**
+- [npm](https://www.npmjs.com/) (já vem com o Node) ou [yarn](https://yarnpkg.com/) / [pnpm](https://pnpm.io/)
+- [Git](https://git-scm.com/)
+
+Para conferir as versões instaladas:
+
+```bash
+node -v
+npm -v
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Como rodar o projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone o repositório
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
 
+### 2. Acesse a pasta do projeto
+
+```bash
+cd nome-do-repositorio
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Inicie o servidor de desenvolvimento
+
+```bash
+npm run dev
+```
+
+O projeto ficará disponível em **http://localhost:5173** (a porta pode variar; confira a saída do terminal).
+
+## Estrutura de pastas
+
+```
+├── public/             # Arquivos estáticos
+├── src/
+│   ├── components/     # Componentes React (ex.: Map)
+│   ├── assets/         # Imagens, ícones e outros recursos
+│   ├── App.tsx         # Componente principal
+│   ├── main.tsx        # Ponto de entrada da aplicação
+│   └── index.css       # Estilos globais e diretivas do Tailwind
+├── index.html
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
 ```
